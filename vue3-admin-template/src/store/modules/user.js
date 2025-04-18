@@ -3,13 +3,14 @@ import { getToken, setToken, removeToken } from "@/utils/auth";
 import { resetRouter } from "@/router/";
 import { defineStore } from "pinia";
 
-const useUserStore = defineStore({
-  id: "user",
-  state: () => ({
-    token: getToken() || "",
-    name: "",
-    avatar: "",
-  }),
+const useUserStore = defineStore("user",{
+  state: () => {
+    return {
+      token: getToken() || "",
+      name: "",
+      avatar: "",
+    }
+  },
   actions: {
     async RESET_STATE() {
       this.$reset();

@@ -2,7 +2,7 @@ import router from "@/router";
 import useStore from "@/store";
 import { ElMessage } from "element-plus";
 import NProgress from "nprogress"; // progress bar
-import "nprogress/nprogress.css"; // progress bar style
+//import "nprogress/nprogress.css"; // progress bar style
 import { getToken } from "@/utils/auth"; // get token from cookie
 import getPageTitle from "@/utils/get-page-title";
 

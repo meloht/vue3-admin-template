@@ -1,15 +1,17 @@
+@use './variables.module.scss' as vals;
+
 #app {
   .main-container {
     min-height: 100%;
     transition: margin-left 0.28s;
-    margin-left: $sideBarWidth;
+    margin-left: vals.$sideBarWidth;
     position: relative;
   }
 
   .sidebar-container {
     transition: width 0.28s;
-    width: $sideBarWidth !important;
-    background-color: $menuBg;
+    width: vals.$sideBarWidth !important;
+    background-color: vals.$menuBg;
     height: 100%;
     position: fixed;
     font-size: 0px;
@@ -72,21 +74,21 @@
     .submenu-title-noDropdown,
     .el-sub-menu__title {
       &:hover {
-        background-color: $menuHover !important;
+        background-color: vals.$menuHover !important;
       }
     }
 
     .is-active > .el-sub-menu__title {
-      color: $subMenuActiveText !important;
+      color: vals.$subMenuActiveText !important;
     }
 
     & .nest-menu .el-sub-menu > .el-sub-menu__title,
     & .el-sub-menu .el-menu-item {
-      min-width: $sideBarWidth !important;
-      background-color: $subMenuBg !important;
+      min-width: vals.$sideBarWidth !important;
+      background-color: vals.$subMenuBg !important;
 
       &:hover {
-        background-color: $subMenuHover !important;
+        background-color: vals.$subMenuHover !important;
       }
     }
   }
@@ -156,7 +158,7 @@
   }
 
   .el-menu--collapse .el-menu .el-sub-menu {
-    min-width: $sideBarWidth !important;
+    min-width: vals.$sideBarWidth !important;
   }
 
   // mobile responsive
@@ -167,14 +169,14 @@
 
     .sidebar-container {
       transition: transform 0.28s;
-      width: $sideBarWidth !important;
+      width: vals.$sideBarWidth !important;
     }
 
     &.hideSidebar {
       .sidebar-container {
         pointer-events: none;
         transition-duration: 0.3s;
-        transform: translate3d(-$sideBarWidth, 0, 0);
+        transform: translate3d(-(vals.$sideBarWidth), 0, 0);
       }
     }
   }
@@ -203,7 +205,7 @@
   .el-menu-item {
     &:hover {
       // you can use $subMenuHover
-      background-color: $menuHover !important;
+      background-color: vals.$menuHover !important;
     }
   }
 
